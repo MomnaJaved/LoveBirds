@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="LoveBirds.css" />
+  </head>
+  <body class="body">
+    <div class="MainDiv">
+      <div class="LeftDiv">
+        <img src="LoveBirds.pics/ACIDS/Lovebirds.png" class="LoveBirdsImg" />
+      </div>
+
+      <div class="RightDiv">
+        <br />
+        <br />
+        <h1 class="h1">Lovebirds</h1>
+        <br />
+        <br />
+        <h2 class="h2">Welcome to Lovebirds</h2>
+        <form class="form" onsubmit="storedata(event)">
+          <label class="usernameLabel" for="username">
+            Username or Email
+          </label>
+          <br />
+          <input
+            class="usernameInput"
+            type="text"
+            id="username"
+            required
+            autocomplete="on"
+          /><br /><br />
+          <label class="passwordLabel" for="password">Password </label>
+          <br />
+          <input
+            class="passwordInput"
+            type="password"
+            id="password"
+            required
+            autocomplete="on"
+          /><br /><br />
+          <a href="#" class="ForgotPassword">Forgot password?</a>
+          <br /><br />
+          <br />
+          <input class="signIn" type="submit" id="signIn" value="Sign In" />
+          <br />
+          <br />
+
+          <p class="or">or</p>
+
+          <a href="#" class="SignInWithGoogle">
+            <img
+              src="LoveBirds.pics/ACIDS/googlelogo.png"
+              class="GoogleImg"
+            />Sign in with Google
+          </a>
+          <br /><br />
+          <p class="NewLoveBirds">
+            New Lovebirds?
+            <a href="#" class="CreateAccount"> Create Account </a>
+          </p>
+        </form>
+      </div>
+    </div>
+    <script
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
+      type="text/javascript"
+    ></script>
+
+    <script type="text/javascript">
+      function storedata(event) {
+        event.preventDefault();
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        localStorage.setItem("Is_username", username);
+        localStorage.setItem("Is_password", password);
+      }
+    </script>
+  </body>
+</html>
